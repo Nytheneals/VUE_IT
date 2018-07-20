@@ -1,6 +1,8 @@
 <template>
   <div>
    <h1>Welcome to ReddIt</h1>
+   <h2>{{title}}</h2>
+   <input type="text" v-model="title">
    <ul>
      <li v-for="(user, index) in users" :key="index">{{user.name}}</li>
    </ul>
@@ -16,6 +18,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      title: "VUE APP",
       threads,
       posts,
       users
